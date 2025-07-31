@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio - DigiMarkPro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">
+                    <img src="images/logo.svg" alt="DigiMarkPro" class="h-10">
+                </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Services</a>
+                <a href="portfolio.html" class="text-blue-600 font-medium">Portfolio</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600 transition duration-300">About</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition duration-300">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-blue-600 font-medium">Portfolio</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition duration-300">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Portfolio</h1>
+            <p class="text-xl max-w-3xl mx-auto">Explore our successful projects and see how we've helped businesses achieve their digital marketing goals.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center mb-12">
+                <button class="portfolio-filter-btn active bg-blue-600 text-white px-6 py-2 rounded-full m-2 focus:outline-none" data-filter="all">All Projects</button>
+                <button class="portfolio-filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full m-2 focus:outline-none hover:bg-blue-600 hover:text-white transition duration-300" data-filter="seo">SEO</button>
+                <button class="portfolio-filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full m-2 focus:outline-none hover:bg-blue-600 hover:text-white transition duration-300" data-filter="marketing">Digital Marketing</button>
+                <button class="portfolio-filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full m-2 focus:outline-none hover:bg-blue-600 hover:text-white transition duration-300" data-filter="automation">Automation</button>
+                <button class="portfolio-filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full m-2 focus:outline-none hover:bg-blue-600 hover:text-white transition duration-300" data-filter="ai">AI Solutions</button>
+                <button class="portfolio-filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full m-2 focus:outline-none hover:bg-blue-600 hover:text-white transition duration-300" data-filter="website">Website Development</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item opacity-100 transition-opacity duration-300" data-category="seo">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="images/portfolio-1.svg" alt="E-commerce SEO Project" class="w-full h-64 object-cover">
+                        <div class="portfolio-overlay p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">E-commerce SEO Optimization</h3>
+                            <p class="mb-4">Increased organic traffic by 200% for an online retail store.</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">E-commerce SEO Optimization</h3>
+                        <p class="text-gray-600">SEO, Content Strategy</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item opacity-100 transition-opacity duration-300" data-category="marketing">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="images/portfolio-2.svg" alt="Social Media Campaign" class="w-full h-64 object-cover">
+                        <div class="portfolio-overlay p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Social Media Marketing Campaign</h3>
+                            <p class="mb-4">Generated 50K+ leads through targeted social media campaigns.</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Social Media Marketing Campaign</h3>
+                        <p class="text-gray-600">Digital Marketing, Social Media</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item opacity-100 transition-opacity duration-300" data-category="automation">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="images/portfolio-3.svg" alt="Marketing Automation" class="w-full h-64 object-cover">
+                        <div class="portfolio-overlay p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Email Marketing Automation</h3>
+                            <p class="mb-4">Increased conversion rates by 45% through automated email sequences.</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Email Marketing Automation</h3>
+                        <p class="text-gray-600">Marketing Automation, Email Marketing</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item opacity-100 transition-opacity duration-300" data-category="ai">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="images/portfolio-4.svg" alt="AI Chatbot" class="w-full h-64 object-cover">
+                        <div class="portfolio-overlay p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Customer Service AI Chatbot</h3>
+                            <p class="mb-4">Reduced response times by 80% with an AI-powered customer service solution.</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Customer Service AI Chatbot</h3>
+                        <p class="text-gray-600">AI Solutions, Customer Service</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item opacity-100 transition-opacity duration-300" data-category="website">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="images/portfolio-5.svg" alt="E-commerce Website" class="w-full h-64 object-cover">
+                        <div class="portfolio-overlay p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">E-commerce Website Redesign</h3>
+                            <p class="mb-4">Increased sales by 75% through improved UX and conversion optimization.</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">E-commerce Website Redesign</h3>
+                        <p class="text-gray-600">Website Development, UX Design</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item opacity-100 transition-opacity duration-300" data-category="seo">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="images/portfolio-6.svg" alt="Local SEO" class="w-full h-64 object-cover">
+                        <div class="portfolio-overlay p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Local SEO Campaign</h3>
+                            <p class="mb-4">Boosted local search visibility by 150% for a chain of restaurants.</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Local SEO Campaign</h3>
+                        <p class="text-gray-600">SEO, Local Marketing</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 7 -->
+                <div class="portfolio-item opacity-100 transition-opacity duration-300" data-category="marketing">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="images/portfolio-7.svg" alt="PPC Campaign" class="w-full h-64 object-cover">
+                        <div class="portfolio-overlay p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">PPC Advertising Campaign</h3>
+                            <p class="mb-4">Achieved 300% ROI on Google Ads campaign for a SaaS company.</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">PPC Advertising Campaign</h3>
+                        <p class="text-gray-600">Digital Marketing, PPC</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 8 -->
+                <div class="portfolio-item opacity-100 transition-opacity duration-300" data-category="ai">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="images/portfolio-8.svg" alt="AI Marketing Tool" class="w-full h-64 object-cover">
+                        <div class="portfolio-overlay p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">AI-Powered Marketing Analytics</h3>
+                            <p class="mb-4">Developed custom AI solution for real-time marketing performance analysis.</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">AI-Powered Marketing Analytics</h3>
+                        <p class="text-gray-600">AI Solutions, Data Analytics</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 9 -->
+                <div class="portfolio-item opacity-100 transition-opacity duration-300" data-category="website">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="images/portfolio-9.svg" alt="Mobile App" class="w-full h-64 object-cover">
+                        <div class="portfolio-overlay p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Mobile App Development</h3>
+                            <p class="mb-4">Created a custom mobile app with integrated marketing features.</p>
+                            <a href="#" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition duration-300">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Mobile App Development</h3>
+                        <p class="text-gray-600">App Development, UX Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Contact us today to discuss how we can help your business achieve similar results.</p>
+            <a href="contact.html" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 inline-block">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">DigiMarkPro</h3>
+                    <p class="text-gray-400 mb-4">Transforming businesses through innovative digital marketing solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#seo" class="text-gray-400 hover:text-white transition duration-300">SEO Optimization</a></li>
+                        <li><a href="services.html#marketing" class="text-gray-400 hover:text-white transition duration-300">Digital Marketing</a></li>
+                        <li><a href="services.html#automation" class="text-gray-400 hover:text-white transition duration-300">Marketing Automation</a></li>
+                        <li><a href="services.html#ai" class="text-gray-400 hover:text-white transition duration-300">AI Agents & Chatbots</a></li>
+                        <li><a href="services.html#website" class="text-gray-400 hover:text-white transition duration-300">Website Development</a></li>
+                        <li><a href="services.html#content" class="text-gray-400 hover:text-white transition duration-300">Content Marketing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-400">123 Marketing Street, Digital City, DC 12345</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-400">(123) 456-7890</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            <span class="text-gray-400">info@digimarkpro.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2023 DigiMarkPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
